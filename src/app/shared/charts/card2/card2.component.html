@@ -1,0 +1,41 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> 
+
+    <!-- <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element" > {{element.position}} </td>
+    </ng-container> -->
+    <ng-container matColumnDef="Fundname">
+      <th mat-header-cell *matHeaderCellDef>Fundname</th>
+      <td mat-cell *matCellDef="let element" white-space: nowrap> {{element.Fundname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="FundCode">
+      <th mat-header-cell *matHeaderCellDef>Code</th>
+      <td mat-cell *matCellDef="let element"> {{element.FundCode}} </td>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="FundType">
+      <th mat-header-cell *matHeaderCellDef> Type </th>
+      <td mat-cell *matCellDef="let element" white-space: nowrap> {{element.FundType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="FundManager">
+      <th mat-header-cell *matHeaderCellDef > Manager </th>
+      <td mat-cell *matCellDef="let element"> {{element.FundManager}} </td>
+    </ng-container>
+
+      <ng-container matColumnDef="FundInceptionDate">
+        <th mat-header-cell *matHeaderCellDef white-space: nowrap> Inception Date </th>
+        <td mat-cell *matCellDef="let element" white-space: nowrap>    {{element.FundInceptionDate}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="FundRedemptionOpenDay">
+        <th mat-header-cell *matHeaderCellDef white-space: nowrap> Redemption OpenDay </th>
+        <td mat-cell *matCellDef="let element" white-space: nowrap> {{element.FundRedemptionOpenDay}}</td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+

@@ -1,0 +1,51 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="TranscationID">
+      <th mat-header-cell *matHeaderCellDef> Transcation ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.TranscationID}} </td>
+    </ng-container>
+    
+    <ng-container matColumnDef="Fundname">
+      <th mat-header-cell *matHeaderCellDef> Fund Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Fundname}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="StockName">
+      <th mat-header-cell *matHeaderCellDef> Stock Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.StockName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="TranscationsType">
+      <th mat-header-cell *matHeaderCellDef> TranscationsType </th>
+      <td mat-cell *matCellDef="let element"> {{element.TranscationsType}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="TransQuantity">
+        <th mat-header-cell *matHeaderCellDef> TransQuantity</th>
+        <td mat-cell *matCellDef="let element"> {{element.TransQuantity}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="TranscationPrice">
+        <th mat-header-cell *matHeaderCellDef> TranscationPrice</th>
+        <td mat-cell *matCellDef="let element"> {{element.TranscationPrice}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="TranscationAmount">
+        <th mat-header-cell *matHeaderCellDef> TranscationAmount</th>
+        <td mat-cell *matCellDef="let element"> {{element.TranscationAmount}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef> Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<mat-divider></mat-divider>
+<mat-paginator [length]="100"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>

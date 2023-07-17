@@ -1,0 +1,38 @@
+<div id="board" class="board-container">
+   <div class="input-fund">
+    <span class="select-label">Select Fund </span>
+    <mat-form-field class="select-box">
+        <mat-label>Fund Name</mat-label>
+        <mat-select [(ngModel)]="selectedFundName" #fundNameElement>
+          <mat-option value="Metori Number 1">Metori Number 1</mat-option>
+          <mat-option value="Metori Number 2">Metori Number 2</mat-option>
+          <mat-option value="Metori Number 3">Metori Number 3</mat-option>
+          <mat-option value="Metori Number 3">Metori Number 4</mat-option>
+          <mat-option value="Metori Number 4">Metori Number 5</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <span class="select-label">Select Date </span>
+      <mat-form-field class="select-box">
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="selectedDate"  #dateElement>
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+   </div>
+   <div class="input-stock">
+    <span class="select-label">Stock Name</span>
+          <div class="input-button-container"> 
+             <mat-form-field class="select-box">
+                 <mat-label>Input Stock Name</mat-label>
+                 <input matInput [(ngModel)]="selectedStockName">
+             </mat-form-field>
+    <div class="button-group">
+        <button mat-raised-button (click)="getSelectedPortfolio()">Search Portfolio</button>
+        <button mat-raised-button (click)="getSelectedTranscation()" >Search Transcation</button>  
+    </div> 
+          </div>
+   </div>
+</div>
+
+
+

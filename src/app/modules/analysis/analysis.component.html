@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="2px" class="fund-cards">
+    <mat-card fxFlex="40">
+        <app-charts-card2 [dataSource]="fund2Data"></app-charts-card2>
+    </mat-card>
+    <mat-card fxFlex="30">
+        <app-charts-card [dataSource]="fundData"></app-charts-card>
+    </mat-card>
+    <mat-card fxFlex="30">
+        <app-charts-pieforfund [series]="seriesforpie"></app-charts-pieforfund>
+    </mat-card>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div fxLayout="row" fxLayoutAlign="space-between center "class="fundtrend-charts">
+    <mat-card fxFlex="100">
+        <app-charts-area [series]="series" [xaxis]="xaxis" style="width: 100%;height:100%" ></app-charts-area>
+    </mat-card>
+</div>
+

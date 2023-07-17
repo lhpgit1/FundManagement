@@ -1,0 +1,20 @@
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="5px" class="fund-cards">
+    <mat-card fxFlex="60">
+        <div class="chart-container">
+            <app-charts-select (portfolioSelected)="onPortfolioSelected($event)" (transcationSelected)="onTranscationSelected($event)"></app-charts-select>
+        </div>
+    </mat-card>
+    <mat-card fxFlex="40">
+        <div class="chart-container">
+        <app-charts-piechart *ngIf="showPortfolioPie"[series]="series"></app-charts-piechart>
+        <app-charts-piefortrans  *ngIf="!showPortfolioPie" [series]="series"></app-charts-piefortrans>
+        </div>
+    </mat-card>
+</div>
+<br>
+<mat-divider></mat-divider>
+<br>
+<div>
+<app-charts-portfoliotable *ngIf="showPortfolioTable"  [dataSource]="portfolioData"></app-charts-portfoliotable>
+<app-charts-transcationtable *ngIf="!showPortfolioTable" [dataSource]="transcationData"></app-charts-transcationtable>
+</div>

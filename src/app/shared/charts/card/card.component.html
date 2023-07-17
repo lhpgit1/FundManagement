@@ -1,0 +1,40 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> 
+
+    <!-- <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element" > {{element.position}} </td>
+    </ng-container> -->
+    <ng-container matColumnDef="Fundname">
+      <th mat-header-cell *matHeaderCellDef>Fundname</th>
+      <td mat-cell *matCellDef="let element" white-space: nowrap> {{element.Fundname}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Fundsize">
+      <th mat-header-cell *matHeaderCellDef> Fundsize </th>
+      <td mat-cell *matCellDef="let element"> {{element.Fundsize}} </td>
+    </ng-container>
+  
+ 
+    <ng-container matColumnDef="Share">
+      <th mat-header-cell *matHeaderCellDef> Shares </th>
+      <td mat-cell *matCellDef="let element"> {{element.Share}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="IOP">
+      <th mat-header-cell *matHeaderCellDef> IOP </th>
+      <td mat-cell *matCellDef="let element"> {{element.FundInitialPrice}} </td>
+    </ng-container>
+
+      <ng-container matColumnDef="Networth">
+        <th mat-header-cell *matHeaderCellDef> Networth </th>
+        <td mat-cell *matCellDef="let element">    {{element.Networth}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Float">
+        <th mat-header-cell *matHeaderCellDef>  Float </th>
+        <td mat-cell *matCellDef="let element" white-space: nowrap> {{element.Float}} %</td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

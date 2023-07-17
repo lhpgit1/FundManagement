@@ -1,0 +1,54 @@
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+  
+    <ng-container matColumnDef="PortfolioID">
+      <th mat-header-cell *matHeaderCellDef> Portfolio ID </th>
+      <td mat-cell *matCellDef="let element"> {{element.PortfolioID}} </td>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="Fundname">
+      <th mat-header-cell *matHeaderCellDef> Fund Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.Fundname}} </td>
+    </ng-container>
+  
+    
+    <ng-container matColumnDef="StockName">
+      <th mat-header-cell *matHeaderCellDef> Stock Name </th>
+      <td mat-cell *matCellDef="let element"> {{element.StockName}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="Holdings">
+      <th mat-header-cell *matHeaderCellDef> Holdings </th>
+      <td mat-cell *matCellDef="let element"> {{element.Holdings}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="PurchaseCoast">
+        <th mat-header-cell *matHeaderCellDef> Purchase Coast </th>
+        <td mat-cell *matCellDef="let element"> {{element.PurchaseCoast}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="DailyPrice">
+        <th mat-header-cell *matHeaderCellDef>  Daily Price</th>
+        <td mat-cell *matCellDef="let element"> {{element.DailyPrice}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="CurrentValue">
+        <th mat-header-cell *matHeaderCellDef> Current Value</th>
+        <td mat-cell *matCellDef="let element"> {{element.CurrentValue}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+        <th mat-header-cell *matHeaderCellDef> Date</th>
+        <td mat-cell *matCellDef="let element"> {{element.Date}} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+<mat-divider></mat-divider>
+<mat-paginator [length]="10"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25, 100]"
+              aria-label="Select page">
+</mat-paginator>
+

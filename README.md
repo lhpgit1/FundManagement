@@ -25,3 +25,35 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+}
+.select-label {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .select-box {
+    width: 300px;
+    height: 75px;
+  }
+  .input-stock {
+    display: flex;
+    align-items: center;
+  }
+  
+  .input-button-container {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+  }
+  .select-box {
+    margin-right: 20px;
+  }
+  
+  .button-group button {
+    margin-left: 25px;
+    width: 180px;
+  }
