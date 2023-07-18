@@ -35,7 +35,6 @@ export class AnalysisService {
           };
         }),
          piedata:series
-
        }
       })
     );

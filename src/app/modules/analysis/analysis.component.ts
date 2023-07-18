@@ -45,6 +45,8 @@ export class AnalysisComponent {
     //console.log(this.fundData);
   });
   this.analysisService.getCureData().subscribe((data) => {
+    // console.log(data.series);
+    // console.log(data.xaxisCategories);
     this.series = data.series;
     this.xaxisCategories = data.xaxisCategories[0];
     console.log(this.series );
